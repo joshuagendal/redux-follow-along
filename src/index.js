@@ -6,10 +6,11 @@ import reducer from './reducers';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import middleware from './middleware'
 
-const store = createStore(reducer);
+const store = createStore(reducer, middleware);
 
-console.log(store.getState());
+// console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}> 
